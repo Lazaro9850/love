@@ -4,7 +4,8 @@
   const count = 28;
 
   for (let i = 0; i < count; i++) {
-    const p = document.createElement('div');
+    const p = document.createElement('span');
+    p.textContent = '♥';
     p.classList.add('particle');
 
     // tamanho aleatório entre 2 e 5px
