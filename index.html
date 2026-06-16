@@ -5,177 +5,359 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>💖 Nosso Cantinho 💖</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="icon.png" type="image/png">
 </head>
 <body>
 
-  <!-- Partículas de fundo -->
-  <div class="particles" id="particles"></div>
+  <!-- Canvas de partículas SVG -->
+  <canvas id="heart-canvas"></canvas>
 
-  <!-- Header -->
-  <header>
-    <div class="header-glow"></div>
-    <div class="photo-ring">
-      <img class="Nosdois" src="Nosdois.jpg" alt="Nós dois">
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="hero-glow-top"></div>
+    <div class="hero-glow-bottom"></div>
+
+    <div class="hero-inner" id="hero-inner">
+      <div class="photo-frame">
+        <div class="photo-ring-outer"></div>
+        <div class="photo-ring-inner">
+          <img class="hero-photo" src="Nosdois.jpg" alt="Nós dois">
+        </div>
+        <div class="photo-petals">
+          <span>🌸</span><span>✨</span><span>🌸</span><span>✨</span><span>🌸</span><span>✨</span>
+        </div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="hero-eyebrow">para os meus olhos mais lindos do mundo</p>
+        <h1 class="hero-title">
+          <span class="hero-title-line1">Oi, minha</span>
+          <span class="hero-title-line2">Princesa</span>
+        </h1>
+        <p class="hero-tagline">Bem-vinda ao nosso cantinho especial</p>
+        <p class="hero-love">
+          Mais uma forma de demonstrar uma pequena parte<br>do imenso amor que sinto por você.
+        </p>
+        <div class="hero-declaration">
+          <span class="declaration-text">EU TE AMO</span>
+          <div class="declaration-line"></div>
+        </div>
+      </div>
     </div>
-    <h1 class="header-title">💕 Oi, minha Princesa 💕</h1>
-    <p class="header-sub">Bem-vinda ao nosso cantinho especial</p>
-    <p class="header-love">Mais uma forma de demonstrar uma pequena parte do imenso amor que sinto por você.<br><span>EU TE AMO</span></p>
+
+    <div class="hero-scroll-hint">
+      <span>rolar para baixo</span>
+      <div class="scroll-arrow"></div>
+    </div>
   </header>
 
-  <!-- Divisor decorativo -->
-  <div class="divider">
-    <span>✦</span><span>✦</span><span>✦</span>
+  <!-- Separador com linha pulsante -->
+  <div class="section-sep">
+    <div class="sep-line"></div>
+    <div class="sep-icon">💕</div>
+    <div class="sep-line"></div>
   </div>
 
-  <!-- Timeline -->
-  <section id="timeline">
-    <h2 class="section-title">📖 Nossa História 📖</h2>
+  <!-- ===== TIMELINE ===== -->
+  <section id="timeline" class="section">
+    <div class="section-header">
+      <p class="section-eyebrow">cada momento guardado no coração</p>
+      <h2 class="section-title">Nossa História</h2>
+    </div>
 
-    <div class="timeline">
+    <div class="timeline-wrap">
+      <div class="tl-spine"></div>
 
-      <div class="event left">
-        <div class="event-dot"></div>
-        <h3>💘 Quando nos conhecemos</h3>
-        <span class="event-date">21/04/25</span>
-        <p>No nosso GD, eu ainda não sabia que a menina mais fofa do mundo iria aparecer na minha vida, deixando tudo mais especial.</p>
+      <!-- evento 1 -->
+      <article class="tl-event tl-left" data-reveal>
+        <div class="tl-node"><div class="tl-node-inner"></div></div>
+        <div class="tl-card">
+          <div class="tl-card-header">
+            <span class="tl-icon">💘</span>
+            <div>
+              <h3 class="tl-title">Quando nos conhecemos</h3>
+              <time class="tl-date">21 · 04 · 25</time>
+            </div>
+          </div>
+          <p class="tl-body">No nosso GD, eu ainda não sabia que a menina mais fofa do mundo iria aparecer na minha vida, deixando tudo mais especial.</p>
+        </div>
+      </article>
+
+      <!-- evento 2 -->
+      <article class="tl-event tl-right" data-reveal>
+        <div class="tl-node"><div class="tl-node-inner"></div></div>
+        <div class="tl-card">
+          <div class="tl-card-header">
+            <span class="tl-icon">🔈</span>
+            <div>
+              <h3 class="tl-title">Show Gospel</h3>
+              <time class="tl-date">10 · 07 · 25</time>
+            </div>
+          </div>
+          <p class="tl-body">Nossa primeira saída juntos — não foi a sós, mas só de estar ao teu lado já tornava o momento especial.</p>
+        </div>
+      </article>
+
+      <!-- evento 3 -->
+      <article class="tl-event tl-left" data-reveal>
+        <div class="tl-node"><div class="tl-node-inner"></div></div>
+        <div class="tl-card">
+          <div class="tl-card-header">
+            <span class="tl-icon">🎉</span>
+            <div>
+              <h3 class="tl-title">E B F</h3>
+              <time class="tl-date">27 · 07 · 25</time>
+            </div>
+          </div>
+          <p class="tl-body">Essa com certeza foi uma das semanas mais memoráveis para mim. Estive perto do meu amorzinho por muitos dias.</p>
+        </div>
+      </article>
+
+      <!-- evento 4 -->
+      <article class="tl-event tl-right" data-reveal>
+        <div class="tl-node"><div class="tl-node-inner"></div></div>
+        <div class="tl-card">
+          <div class="tl-card-header">
+            <span class="tl-icon">🌅</span>
+            <div>
+              <h3 class="tl-title">Nosso primeiro ensaio juntos</h3>
+              <time class="tl-date">26 · 07 · 25</time>
+            </div>
+          </div>
+          <p class="tl-body">Um momento simples, mas cheio de significado. Lembro muito bem dos nossos abraços e cheirinhos daquele dia.</p>
+          <div class="tl-photo-wrap">
+            <img src="att1.jpg" alt="Ensaio" loading="lazy">
+            <div class="tl-photo-overlay"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- evento 5 -->
+      <article class="tl-event tl-left" data-reveal>
+        <div class="tl-node"><div class="tl-node-inner"></div></div>
+        <div class="tl-card">
+          <div class="tl-card-header">
+            <span class="tl-icon">🏡</span>
+            <div>
+              <h3 class="tl-title">Primeira vinda na casa da sogra</h3>
+              <time class="tl-date">28 · 08 · 25</time>
+            </div>
+          </div>
+          <p class="tl-body">Vindo para estudar, mas no fundo sempre com a desculpa de se encontrar. Com você, todos os momentos ficam mais felizes, meu amor.</p>
+          <div class="tl-photo-wrap">
+            <img src="att2.jpg" alt="Vinda em casa" loading="lazy">
+            <div class="tl-photo-overlay"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- evento 6 -->
+      <article class="tl-event tl-right" data-reveal>
+        <div class="tl-node"><div class="tl-node-inner"></div></div>
+        <div class="tl-card">
+          <div class="tl-card-header">
+            <span class="tl-icon">🎉</span>
+            <div>
+              <h3 class="tl-title">Nosso dia INTEIRO juntos</h3>
+              <time class="tl-date">04 · 08 · 25</time>
+            </div>
+          </div>
+          <p class="tl-body">Ficamos tão confortáveis um com o outro que, mesmo após um dia inteiro juntos, já sentimos saudade no momento em que nos despedimos.</p>
+          <div class="tl-photo-wrap">
+            <img src="att3.jpg" alt="Dia inteiro juntos" loading="lazy">
+            <div class="tl-photo-overlay"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- evento 7 -->
+      <article class="tl-event tl-left" data-reveal>
+        <div class="tl-node"><div class="tl-node-inner"></div></div>
+        <div class="tl-card tl-card-special">
+          <div class="tl-card-header">
+            <span class="tl-icon">🎂</span>
+            <div>
+              <h3 class="tl-title">Seu aniversário</h3>
+              <time class="tl-date">17 · 08 · 25</time>
+            </div>
+          </div>
+          <p class="tl-body">Ver o brilho nos seus olhos naquele dia foi o melhor presente que eu poderia ganhar. Uma menina linda, doce, fofa e a mais carinhosa e perfeita possível.</p>
+          <div class="tl-photo-wrap">
+            <img src="att4.jpg" alt="Aniversário" loading="lazy">
+            <div class="tl-photo-overlay"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- evento 8 -->
+      <article class="tl-event tl-right" data-reveal>
+        <div class="tl-node"><div class="tl-node-inner"></div></div>
+        <div class="tl-card">
+          <div class="tl-card-header">
+            <span class="tl-icon">👙</span>
+            <div>
+              <h3 class="tl-title">Dia de piscina</h3>
+              <time class="tl-date">18 · 08 · 25</time>
+            </div>
+          </div>
+          <p class="tl-body">A piscina molhou, mas o calor do teu amor fez o mundo parecer ensolarado. O brilho dos teus olhos me traz luz e calma.</p>
+          <div class="tl-photo-wrap">
+            <img src="att5.jpg" alt="Dia de piscina" loading="lazy">
+            <div class="tl-photo-overlay"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- evento 9 -->
+      <article class="tl-event tl-left" data-reveal>
+        <div class="tl-node"><div class="tl-node-inner"></div></div>
+        <div class="tl-card tl-card-special">
+          <div class="tl-card-header">
+            <span class="tl-icon">💞</span>
+            <div>
+              <h3 class="tl-title">Nosso dia especial</h3>
+              <time class="tl-date">18 · 08 · 25</time>
+            </div>
+          </div>
+          <p class="tl-body">Um lembrete de que cada dia contigo é cheio de amor e carinho. Que, como Samuel e Débora, possamos estar no altar um dia.</p>
+          <div class="tl-photo-wrap">
+            <img src="att6.jpg" alt="Nosso dia especial" loading="lazy">
+            <div class="tl-photo-overlay"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- mensagem final da timeline -->
+      <div class="tl-finale" data-reveal>
+        <div class="tl-finale-inner">
+          <div class="tl-finale-deco">✦ ✦ ✦</div>
+          <p class="tl-finale-text">Pode não ter sido muita coisa até agora,<br>mas com certeza foi um dos períodos mais felizes da minha vida.<br><em>Todas as vivências com você são únicas.</em></p>
+          <p class="tl-finale-prayer">💕 Que Deus possa proporcionar mais desses momentos incríveis no nosso futuro. 💕</p>
+        </div>
       </div>
 
-      <div class="event right">
-        <div class="event-dot"></div>
-        <h3>🔈 Show Gospel</h3>
-        <span class="event-date">10/07/25</span>
-        <p>Nossa primeira saída juntos — não foi a sós, mas só de estar ao teu lado já tornava o momento especial.</p>
+    </div><!-- /timeline-wrap -->
+  </section>
+
+  <!-- Separador -->
+  <div class="section-sep">
+    <div class="sep-line"></div>
+    <div class="sep-icon">🌸</div>
+    <div class="sep-line"></div>
+  </div>
+
+  <!-- ===== GALERIA ===== -->
+  <section id="gallery" class="section">
+    <div class="section-header">
+      <p class="section-eyebrow">capturada em três versos</p>
+      <h2 class="section-title">Retratos de você</h2>
+    </div>
+
+    <p class="gallery-quote">Na delicadeza da sua beleza de princesa,<br>no brilho dos seus olhos e no seu sorriso radiante<br>encontro a alegria mais verdadeira dos meus dias.</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-card" data-reveal>
+        <div class="gallery-img-wrap">
+          <img src="Princesa.jpg" alt="Foto 1" loading="lazy">
+          <div class="gallery-shine"></div>
+        </div>
+        <div class="gallery-caption">
+          <span class="gallery-verse">Provérbios 31:10</span>
+          <p class="gallery-verse-text">"Mulher virtuosa, quem a achará?<br>O seu valor muito excede o de rubis."</p>
+        </div>
       </div>
 
-      <div class="event left">
-        <div class="event-dot"></div>
-        <h3>🎉 E B F</h3>
-        <span class="event-date">27/07/25</span>
-        <p>Essa com certeza foi uma das semanas mais memoráveis para mim. Estive perto do meu amorzinho por muitos dias.</p>
+      <div class="gallery-card gallery-card-center" data-reveal>
+        <div class="gallery-img-wrap">
+          <img src="Olhos.jpg" alt="Foto 2" loading="lazy">
+          <div class="gallery-shine"></div>
+        </div>
+        <div class="gallery-caption">
+          <span class="gallery-verse">Cânticos 4:1</span>
+          <p class="gallery-verse-text">"Eis que és formosa, amada minha;<br>eis que és formosa; os teus olhos são como pombas."</p>
+        </div>
       </div>
 
-      <div class="event right">
-        <div class="event-dot"></div>
-        <h3>🌅 Nosso primeiro ensaio juntos</h3>
-        <span class="event-date">26/07/25</span>
-        <p>Um momento simples, mas cheio de significado. Lembro muito bem dos nossos abraços e cheirinhos daquele dia.</p>
-        <img src="att1.jpg" alt="Ensaio">
+      <div class="gallery-card" data-reveal>
+        <div class="gallery-img-wrap">
+          <img src="Sorriso.jpg" alt="Foto 3" loading="lazy">
+          <div class="gallery-shine"></div>
+        </div>
+        <div class="gallery-caption">
+          <span class="gallery-verse">Salmos 16:11</span>
+          <p class="gallery-verse-text">"Na tua presença há plenitude de alegria;<br>na tua destra há delícias perpetuamente."</p>
+        </div>
       </div>
-
-      <div class="event left">
-        <div class="event-dot"></div>
-        <h3>🏡 Primeira vinda na casa da sogra</h3>
-        <span class="event-date">28/08/25</span>
-        <p>Vindo para estudar, mas no fundo sempre com a desculpa de se encontrar. Com você, todos os momentos ficam mais felizes, meu amor.</p>
-        <img src="att2.jpg" alt="Vinda em casa">
-      </div>
-
-      <div class="event right">
-        <div class="event-dot"></div>
-        <h3>🎉 Nosso dia INTEIRO juntos</h3>
-        <span class="event-date">04/08/25</span>
-        <p>Ficamos tão confortáveis um com o outro que, mesmo após um dia inteiro juntos, já sentimos saudade no momento em que nos despedimos.</p>
-        <img src="att3.jpg" alt="Dia inteiro juntos">
-      </div>
-
-      <div class="event left">
-        <div class="event-dot"></div>
-        <h3>🎂 Seu aniversário</h3>
-        <span class="event-date">17/08/25</span>
-        <p>Ver o brilho nos seus olhos naquele dia foi o melhor presente que eu poderia ganhar. Uma menina linda, doce, fofa e a mais carinhosa e perfeita possível.</p>
-        <img src="att4.jpg" alt="Aniversário">
-      </div>
-
-      <div class="event right">
-        <div class="event-dot"></div>
-        <h3>👙 Dia de piscina</h3>
-        <span class="event-date">18/08/25</span>
-        <p>A piscina molhou, mas o calor do teu amor fez o mundo parecer ensolarado. O brilho dos teus olhos me traz luz e calma.</p>
-        <img src="att5.jpg" alt="Dia de piscina">
-      </div>
-
-      <div class="event left">
-        <div class="event-dot"></div>
-        <h3>💞 Nosso dia especial</h3>
-        <span class="event-date">18/08/25</span>
-        <p>Um lembrete de que cada dia contigo é cheio de amor e carinho. Que, como Samuel e Débora, possamos estar no altar um dia.</p>
-        <img src="att6.jpg" alt="Nosso dia especial">
-      </div>
-
-      <!-- Mensagem final -->
-      <div class="event-final">
-        <p class="final-text">Pode não ter sido muita coisa até agora,<br>mas com certeza foi um dos períodos mais felizes da minha vida.<br>Todas as vivências com você são únicas.</p>
-        <p class="final-prayer">💕 Que Deus possa proporcionar mais desses momentos incríveis no nosso futuro. 💕</p>
-      </div>
-
     </div>
   </section>
 
-  <!-- Divisor decorativo -->
-  <div class="divider">
-    <span>🌸</span><span>🌸</span><span>🌸</span>
+  <!-- Separador -->
+  <div class="section-sep">
+    <div class="sep-line"></div>
+    <div class="sep-icon">✦</div>
+    <div class="sep-line"></div>
   </div>
 
-  <!-- Galeria -->
-  <section id="gallery">
-    <h2 class="section-title">Retratos de você</h2>
-    <p class="gallery-quote">Na delicadeza da sua beleza de princesa, no brilho dos seus olhos e no seu sorriso radiante encontro a alegria mais verdadeira dos meus dias.</p>
+  <!-- ===== COUNTDOWN ===== -->
+  <section id="countdown" class="section" data-reveal>
+    <div class="section-header">
+      <p class="section-eyebrow">cada segundo que passa contigo vale</p>
+      <h2 class="section-title">Tempo juntos</h2>
+    </div>
 
-    <div class="gallery">
-      <div class="gallery-item">
-        <img class="Galeria" src="Princesa.jpg" alt="Foto 1">
-        <span class="gallery-verse">Provérbios 31:10</span>
+    <div class="countdown-wrap">
+      <div class="countdown-card">
+
+        <div class="cd-unit" id="cd-days-box">
+          <div class="cd-flip-wrap">
+            <span class="cd-num" id="cd-days">000</span>
+          </div>
+          <span class="cd-label">dias</span>
+        </div>
+
+        <div class="cd-sep">:</div>
+
+        <div class="cd-unit" id="cd-hours-box">
+          <div class="cd-flip-wrap">
+            <span class="cd-num" id="cd-hours">00</span>
+          </div>
+          <span class="cd-label">horas</span>
+        </div>
+
+        <div class="cd-sep">:</div>
+
+        <div class="cd-unit" id="cd-minutes-box">
+          <div class="cd-flip-wrap">
+            <span class="cd-num" id="cd-minutes">00</span>
+          </div>
+          <span class="cd-label">minutos</span>
+        </div>
+
+        <div class="cd-sep">:</div>
+
+        <div class="cd-unit" id="cd-seconds-box">
+          <div class="cd-flip-wrap">
+            <span class="cd-num" id="cd-seconds">00</span>
+          </div>
+          <span class="cd-label">segundos</span>
+        </div>
+
       </div>
-      <div class="gallery-item">
-        <img class="Galeria" src="Olhos.jpg" alt="Foto 2">
-        <span class="gallery-verse">Cânticos 4:1</span>
-      </div>
-      <div class="gallery-item">
-        <img class="Galeria" src="Sorriso.jpg" alt="Foto 3">
-        <span class="gallery-verse">Salmos 16:11</span>
-      </div>
+
+      <p class="countdown-sub">desde que a menina mais fofa do mundo chegou</p>
     </div>
   </section>
 
-  <!-- Divisor decorativo -->
-  <div class="divider">
-    <span>✦</span><span>✦</span><span>✦</span>
-  </div>
-
-  <!-- Contagem -->
-  <section id="countdown">
-    <h2 class="section-title">⏳ Tempo juntos ⏳</h2>
-    <div class="countdown-card">
-      <div class="countdown-unit" id="days-box">
-        <span class="count-num" id="cd-days">0</span>
-        <span class="count-label">dias</span>
-      </div>
-      <div class="countdown-sep">:</div>
-      <div class="countdown-unit" id="hours-box">
-        <span class="count-num" id="cd-hours">00</span>
-        <span class="count-label">horas</span>
-      </div>
-      <div class="countdown-sep">:</div>
-      <div class="countdown-unit" id="minutes-box">
-        <span class="count-num" id="cd-minutes">00</span>
-        <span class="count-label">minutos</span>
-      </div>
-      <div class="countdown-sep">:</div>
-      <div class="countdown-unit" id="seconds-box">
-        <span class="count-num" id="cd-seconds">00</span>
-        <span class="count-label">segundos</span>
-      </div>
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-hearts">
+      <span>💗</span><span>💗</span><span>💗</span>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>Feito com 💗 só pra você</p>
+    <p class="footer-text">Feito com amor infinito</p>
+    <p class="footer-sub">só pra você, minha princesa</p>
   </footer>
 
   <script src="scripts.js"></script>
 </body>
 </html>
-
